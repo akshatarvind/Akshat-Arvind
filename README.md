@@ -1,75 +1,95 @@
-# Akshat Arvind - Modern Personal Portfolio Website
+# Akshat Arvind - Personal Portfolio Website
 
-A personal portfolio website for **Akshat Arvind**, B.Tech Student at JECRC University, Jaipur, India. Built with **React 19**, **Vite**, **Tailwind CSS v4**, and **Lucide Icons**.
+A personal brand portfolio website designed and built for **Akshat Arvind** (B.Tech CSE Student at JECRC University, Jaipur | AI & Technology Enthusiast).
 
-Designed for seamless deployment to **Vercel** or any modern static hosting platform.
-
----
-
-## 🌟 Key Features
-
-- **Modern & Premium Design**: Dark mode by default with instant Dark / Light toggle and persistent state.
-- **Glassmorphism & Micro-Interactions**: Translucent blurred headers, glowing gradient orbs, and hover transitions.
-- **Interactive Project Showcase**: Detailed project cards with technology pills, direct GitHub links, and an in-depth **Project Modal** for deep dives.
-- **Skills Categorization**: Filterable skill cards (Languages, AI & ML, Web Development, Productivity) with level indicators and icons.
-- **Academic Timeline**: Structured B.Tech coursework and learning path at JECRC University.
-- **Achievements & Certifications**: Categorized milestone tracker (Certifications, Hackathons, Courses, Awards).
-- **Direct Contact Channel**: Direct email with 1-click **Copy to Clipboard**, integrated feedback message form, and active LinkedIn/GitHub links.
-- **100% Mobile Responsive**: Hamburger drawer navigation with smooth slide-in and backdrop dismissal.
-- **Vercel Ready**: Pre-configured `vercel.json` for zero-configuration SPA routing.
+Built with **React**, **Vite**, **Tailwind CSS**, and **Lucide Icons**.
 
 ---
 
-## 🚀 Quick Start (Local Development)
+## 🚀 Quick Start
 
 ### 1. Install Dependencies
 ```bash
 npm install
 ```
 
-### 2. Start Local Development Server
+### 2. Start Development Server
 ```bash
 npm run dev
 ```
-Open your browser at `http://localhost:5173`.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ### 3. Build for Production
 ```bash
 npm run build
 ```
-The compiled output is located in the `dist/` directory.
+Creates an optimized production bundle in the `dist/` directory.
+
+---
+
+## ⚙️ How to Customize Your Portfolio
+
+All personal information, links, social profiles, projects, skills, and achievements are centralized in a single file:
+
+📂 `src/data/portfolioData.js`
+
+### 1. Update Contact Information & Links
+In `src/data/portfolioData.js`:
+- Replace `[YOUR EMAIL]` with your real email (e.g., `akshat@example.com`).
+- Replace `[YOUR LINKEDIN]` with your LinkedIn username or profile URL.
+- Replace `[YOUR GITHUB]` with your GitHub username or profile URL.
+
+### 2. Update Projects
+In `src/data/portfolioData.js`, edit `projectsData` to add your actual GitHub repositories and deployed live links.
+
+### 3. Add Verified Achievements
+In `src/data/portfolioData.js`, edit `achievementsData` to replace the placeholder slots with your actual certifications, hackathon projects, courses, or awards.
+
+---
+
+## 📁 Project Architecture
+
+```
+portfolio/
+├── index.html                  # SEO, OpenGraph tags, Google Fonts, Favicon
+├── package.json                # Dependencies & scripts
+├── vite.config.js              # Vite server & build configuration
+├── tailwind.config.js          # Dark theme colors, gradients & keyframes
+├── postcss.config.js           # PostCSS configuration
+├── public/
+│   └── favicon.svg             # Modern branded monogram SVG favicon
+├── src/
+│   ├── main.jsx                # Application root entry
+│   ├── App.jsx                 # App layout, active section tracking, modals
+│   ├── index.css               # Tailwind directives, glassmorphic utility classes
+│   ├── data/
+│   │   └── portfolioData.js    # 🎯 CENTRALIZED PORTFOLIO DATA & PLACEHOLDERS
+│   └── components/
+│       ├── Navbar.jsx          # Glassmorphic navbar, active spy, mobile drawer
+│       ├── Hero.jsx            # Impactful hero with live badge & CTAs
+│       ├── About.jsx           # Two-column introduction & student profile card
+│       ├── Education.jsx       # JECRC University timeline & coursework chips
+│       ├── Skills.jsx          # Filterable skill cards (Programming, AI, Web, Productivity)
+│       ├── Projects.jsx        # 3 Featured projects with abstract UI previews
+│       ├── Achievements.jsx    # Categorized milestones & update guidance
+│       ├── Learning.jsx        # "What I'm Exploring" dynamic status cards
+│       ├── Contact.jsx         # "Let's Build Something", email copy & form
+│       ├── Footer.jsx          # Branded footer, 2026 copyright, back to top
+│       ├── BackgroundGlow.jsx  # Ambient background glow mesh & cyber grid
+│       └── NotificationModal.jsx # Feedback modal for placeholder guidance
+```
 
 ---
 
 ## 🌐 Deploy to Vercel
 
-### Option A: Import via GitHub (Recommended)
-1. Push this repository to your GitHub account (`https://github.com/akshatarvind/portfolio`).
-2. Go to [vercel.com](https://vercel.com) and log in with your GitHub account.
-3. Click **"Add New..."** -> **"Project"** and select your portfolio repository.
+1. Push your repository to GitHub.
+2. Go to [Vercel](https://vercel.com) and click **"Add New Project"**.
+3. Import your GitHub repository.
 4. Framework Preset will automatically detect **Vite**.
-5. Click **Deploy**. Your portfolio will be live on your custom `.vercel.app` domain in seconds!
-
-### Option B: Deploy using Vercel CLI
-```bash
-npx vercel
-```
+5. Click **"Deploy"**.
 
 ---
 
-## ✏️ Easy Customization
-
-All personal details, skills, education, projects, and achievements are centrally maintained in a single file:
-👉 **`src/data/portfolioData.js`**
-
-To update your projects, add new certifications, or change contact links, simply edit this file!
-
----
-
-## 🛠️ Tech Stack
-
-- **Framework**: React 19
-- **Build Tool**: Vite
-- **Styling**: Tailwind CSS v4
-- **Icons**: Lucide React
-- **Deployment**: Vercel
+## 📄 License
+&copy; 2026 Akshat Arvind. All rights reserved.

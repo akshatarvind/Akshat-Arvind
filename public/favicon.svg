@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="fireGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444" />
+      <stop offset="50%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+    <linearGradient id="glowFire" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#f97316" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#050505" stroke="rgba(239,68,68,0.25)" stroke-width="2"/>
+  <rect x="4" y="4" width="56" height="56" rx="12" fill="url(#glowFire)"/>
+  <!-- Stylized Monogram "AA" with Flame Accent -->
+  <path d="M18 44L28 20L38 44" stroke="url(#fireGrad)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M22 36H34" stroke="url(#fireGrad)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M36 44L44 24L48 34" stroke="#ef4444" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="48" cy="22" r="2.5" fill="#f97316"/>
+</svg>

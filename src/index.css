@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: #050505;
+    color: #f1f5f9;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: rgba(239, 68, 68, 0.3);
+    color: #fca5a5;
+  }
+
+  /* Custom subtle scrollbar with red hover */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #050505;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1f1414;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ef4444;
+  }
+
+  /* Focus ring for accessibility */
+  :focus-visible {
+    outline: 2px solid #ef4444;
+    outline-offset: 3px;
+  }
+}
+
+@layer utilities {
+  .glass-nav {
+    background: rgba(6, 4, 4, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-card {
+    background: rgba(18, 10, 10, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-card-hover {
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .glass-card-hover:hover {
+    background: rgba(26, 14, 14, 0.9);
+    border-color: rgba(239, 68, 68, 0.45);
+    box-shadow: 0 10px 30px -10px rgba(239, 68, 68, 0.25), 0 0 1px 1px rgba(239, 68, 68, 0.3);
+    transform: translateY(-3px);
+  }
+
+  /* 3D Floating Icon Pod with multi-layered specular reflections */
+  .icon-pod {
+    background: radial-gradient(135% 135% at 20% 20%, rgba(255, 255, 255, 0.08) 0%, rgba(239, 68, 68, 0.12) 60%, rgba(12, 6, 6, 0.9) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.7), 0 0 16px -2px rgba(239, 68, 68, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .icon-pod:hover {
+    transform: translateY(-4px) scale(1.08);
+    border-color: rgba(239, 68, 68, 0.65);
+    box-shadow: 0 12px 30px -4px rgba(239, 68, 68, 0.35), 0 0 24px 2px rgba(239, 68, 68, 0.45), inset 0 1px 2px rgba(255, 255, 255, 0.4);
+  }
+
+  /* Die-cut sticker drop shadow effect */
+  .sticker-shadow {
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.4))
+            drop-shadow(0 0 12px rgba(239, 68, 68, 0.55))
+            drop-shadow(0 20px 35px rgba(0, 0, 0, 0.9));
+    transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  .sticker-shadow:hover {
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.7))
+            drop-shadow(0 0 22px rgba(239, 68, 68, 0.8))
+            drop-shadow(0 28px 45px rgba(0, 0, 0, 0.95));
+  }
+
+  /* Colored Icon Glows */
+  .icon-glow-red {
+    filter: drop-shadow(0 0 8px rgba(239, 68, 68, 0.65));
+  }
+  .icon-glow-orange {
+    filter: drop-shadow(0 0 8px rgba(249, 115, 22, 0.65));
+  }
+  .icon-glow-amber {
+    filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.65));
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 50%, #94a3b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-accent {
+    background: linear-gradient(135deg, #ef4444 0%, #f97316 50%, #fbbf24 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-fire {
+    background: linear-gradient(135deg, #f87171 0%, #ef4444 50%, #f97316 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .glow-fire {
+    box-shadow: 0 0 45px -10px rgba(239, 68, 68, 0.4);
+  }
+
+  .glow-amber {
+    box-shadow: 0 0 45px -10px rgba(249, 115, 22, 0.35);
+  }
+}
+
+/* Reduced motion preference respect */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
